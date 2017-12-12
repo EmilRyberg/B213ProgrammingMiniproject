@@ -1,6 +1,8 @@
 # ProgrammingMiniproject
 Packages required:
+
 ZBar: sudo apt-get install libzbar-dev
+
 Audio_common: sudo apt-get install ros-kinetic-audio-common
 
 OpenCV, documentation for installation:
