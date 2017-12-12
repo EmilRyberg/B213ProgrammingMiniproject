@@ -23,7 +23,6 @@ using namespace cv;
 using namespace std;
 using namespace zbar;
 
-sensor_msgs::ImageConstPtr current_frame; 
 const ros::Publisher* qr_code_publisher_ptr; //publisher for the master
 
 void ImageRawCallback(const sensor_msgs::ImageConstPtr& data_ptr); //declaration, used later
@@ -50,7 +49,7 @@ int main(int argc, char *argv[]) {
 //sensor_msgs::ImageConstPtr& type = constant reference pointer that points to the data from the camera
 void ImageRawCallback(const sensor_msgs::ImageConstPtr& data_ptr)  
 {
-	current_frame = data_ptr; //Making current_frame look into the same location as the data_ptr.
+	sensor_msgs::ImageConstPtr current_frame = data_ptr; //Making current_frame look into the same location as the data_ptr.
 	cv_bridge::CvImagePtr cv_ptr; 
 
 	//Tries to copy the data from the location current_frame is looking into.
