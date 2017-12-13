@@ -1,4 +1,4 @@
-# ProgrammingMiniproject
+# B2-13 Programming Miniproject
 Packages required:
 
 ZBar: sudo apt-get install libzbar-dev
